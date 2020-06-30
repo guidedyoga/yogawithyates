@@ -12,16 +12,11 @@
     }
   },
   "rules": {
-    "semi": "error",
-    "comma-dangle": [
-      "error",
-      {
-        "objects": "never",
-        "imports": "never",
-        "exports": "never",
-        "functions": "never"
-      }
+    "linebreak-style": [
+      2,
+      "windows"
     ],
+    "semi": "error",
     "no-unused-vars": "error",
     "react/no-unused-prop-types": "error",
     "react/prop-types": "error",
@@ -38,12 +33,15 @@
     "jest/prefer-to-have-length": "warn",
     "jest/valid-expect": "error"
   },
-  "plugins": ["react", "jest"],
+  "plugins": [
+    "react",
+    "jest"
+  ],
   "extends": [
+    "airbnb",
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "airbnb"
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
   ]
 }

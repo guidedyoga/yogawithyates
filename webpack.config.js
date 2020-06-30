@@ -1,14 +1,20 @@
 const path = require('path');
-const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    chunkFilename: '[id].js',
-    publicPath: '',
+  devtool: 'cheap-inline-source-map',
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:9090',
+    },
+    contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true,
+    hot: true,
+    port: 9090,
+  },
+  entry: {
+    main: './src/index.js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -17,43 +23,31 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        loader: ['babel-loader', 'eslint-loader'],
-        exclude: /node_modules/,
+        use: 'babel-loader',
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: {
-                localIdentName: '[name]__[local]___[hash:base64:5]',
-              },
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: () => [autoprefixer({})],
-            },
-          },
+          'style-loader',
+          'css-loader',
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
-        loader: 'url-loader?limit=10000&name=img/[name].[ext]',
+        test: /\.(png|jpg|jpeg|gif)$/,
+        use: [
+          'url-loader',
+        ],
       },
     ],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: `${__dirname}/public/index.html`,
-      filename: 'index.html',
-      inject: 'body',
+      template: './public/index.html',
     }),
   ],
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].bundle.js',
+  },
 };

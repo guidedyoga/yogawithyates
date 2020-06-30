@@ -1,7 +1,3 @@
-/* eslint-disable max-len */
-// For a detailed explanation regarding each configuration property, visit:
-// https://jestjs.io/docs/en/configuration.html
-
 module.exports = {
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: [
@@ -18,7 +14,8 @@ module.exports = {
     'node',
   ],
 
-  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  // A list of paths to modules that run some code to configure
+  // or set up the testing framework before each test
   setupFilesAfterEnv: [
     '<rootDir>/src/setupTests.js',
   ],
@@ -32,12 +29,14 @@ module.exports = {
     '**/?(*.)+(spec|test).[tj]s?(x)',
   ],
 
-  // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
+  // An array of regexp pattern strings that are matched against all test paths
+  // matched tests are skipped
   testPathIgnorePatterns: [
     '\\\\node_modules\\\\',
   ],
 
-  // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+  // An array of regexp pattern strings that are matched against all source file paths
+  // matched files will skip transformation
   transformIgnorePatterns: [
     '\\\\node_modules\\\\',
   ],

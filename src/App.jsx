@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import EmailField from './EmailField';
 
 const Container = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ function App() {
     <Container>
       <Title>Yoga With Yates</Title>
       <Paragraph>namaste tuned for more...</Paragraph>
+      <EmailField />
     </Container>
   );
 }

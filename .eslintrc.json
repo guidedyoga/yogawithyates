@@ -18,6 +18,7 @@
     ],
     "semi": "error",
     "no-unused-vars": "error",
+    "function-paren-newline": "warn",
     "react/no-unused-prop-types": "error",
     "react/prop-types": "error",
     "react/require-default-props": "error",
@@ -27,6 +28,7 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-fragments": "error",
+    "react/no-array-index-key": "error",
     "jest/no-disabled-tests": "warn",
     "jest/no-focused-tests": "error",
     "jest/no-identical-title": "error",
@@ -34,6 +36,7 @@
     "jest/valid-expect": "error"
   },
   "plugins": [
+    "airbnb",
     "react",
     "jest"
   ],

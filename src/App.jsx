@@ -16,12 +16,20 @@ const Title = styled.div`
   font-weight: 400;
   font-size: 96px;
   margin-top: 0;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 54px;
+    padding: 20px;
+  }
 `;
 
 const Paragraph = styled.div`
   font-family: 'Roboto', sans-serif;
   font-size: 34px;
   font-weight: 300;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 function App() {

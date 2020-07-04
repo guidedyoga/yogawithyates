@@ -8,19 +8,23 @@ import {
 } from './profile';
 
 const EmailField = ({
-  firstName, lastName, experience, chakra,
-}) => (
-  <>
-    <form>
-      <Name firstName={firstName} lastName={lastName} />
-      <Experience experience={experience} />
-      <Chakra chakra={chakra} />
-      <button type="submit">Submit</button>
-    </form>
-  </>
-);
+  hidden, firstName, lastName, experience, chakra,
+}) => {
+  if (hidden) return null;
+  return (
+    <>
+      <form>
+        <Name firstName={firstName} lastName={lastName} />
+        <Experience experience={experience} />
+        <Chakra chakra={chakra} />
+        <button type="submit">Submit</button>
+      </form>
+    </>
+  );
+};
 
 EmailField.propTypes = {
+  hidden: PropTypes.bool,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
   experience: PropTypes.string,
@@ -28,6 +32,7 @@ EmailField.propTypes = {
 };
 
 EmailField.defaultProps = {
+  hidden: true,
   firstName: 'First',
   lastName: 'Last',
   experience: 'Level 5',

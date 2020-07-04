@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run build:lint && webpack",
+    "build": "npm run build:lint && npm run build:test && webpack",
     "build:lint": "npm run lint",
+    "build:test": "npm run test",
     "lint": "eslint src/*.js",
     "lint:fix": "eslint src/*.js --fix",
     "start": "webpack-dev-server",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test:coverage": "jest --coverage",
+    "test": "npm run test:coverage"
   },
   "browserslist": {
     "production": [

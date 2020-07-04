@@ -5,6 +5,7 @@
     "jest": true
   },
   "rules": {
+    "linebreak-style": "off",
     "semi": "error",
     "no-unused-vars": "error",
     "function-paren-newline": "warn",

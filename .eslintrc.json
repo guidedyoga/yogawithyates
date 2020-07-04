@@ -36,7 +36,6 @@
     "jest/valid-expect": "error"
   },
   "plugins": [
-    "airbnb",
     "react",
     "jest"
   ],

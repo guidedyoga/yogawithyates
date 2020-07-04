@@ -12,10 +12,6 @@
     }
   },
   "rules": {
-    "linebreak-style": [
-      2,
-      "windows"
-    ],
     "semi": "error",
     "no-unused-vars": "error",
     "function-paren-newline": "warn",

@@ -1,5 +1,4 @@
 import React from 'react';
-import { SocialIcon } from 'react-social-icons';
 import styled from 'styled-components';
 
 const Space = styled.div`
@@ -14,6 +13,8 @@ const Row = styled.a`
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  justify-content: center;
+  padding: 1rem;
   margin-top: 1rem;
   color: #fff;
   background: #000;
@@ -33,11 +34,11 @@ function Links() {
   return (
     <>
       <Space />
-      <Row title="Instagram" href={instagramLink}>
-        <Text>@audrey_yoga_co</Text>
-      </Row>
       <Row title="Facebook" href={facebookLink}>
         <Text>@yogawithyates</Text>
+      </Row>
+      <Row title="Instagram" href={instagramLink}>
+        <Text>@audrey_yoga_co</Text>
       </Row>
     </>
   );

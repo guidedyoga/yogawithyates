@@ -34,22 +34,10 @@ function Links() {
     <>
       <Space />
       <Row title="Instagram" href={instagramLink}>
-        <SocialIcon
-          url={instagramLink}
-          network="instagram"
-          fgColor="#fff"
-          bgColor="#000"
-        />
-        <Text>audrey_yoga_co</Text>
+        <Text>@audrey_yoga_co</Text>
       </Row>
       <Row title="Facebook" href={facebookLink}>
-        <SocialIcon
-          url={facebookLink}
-          network="facebook"
-          fgColor="#fff"
-          bgColor="#000"
-        />
-        <Text>yogawithyates</Text>
+        <Text>@yogawithyates</Text>
       </Row>
     </>
   );

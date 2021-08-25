@@ -6,6 +6,7 @@
     "build": "npm run build:lint && npm run build:test && webpack",
     "build:lint": "npm run lint",
     "build:test": "npm run test",
+    "webpack": "webpack",
     "lint": "eslint src/*.js",
     "lint:fix": "eslint src/*.js --fix",
     "start": "webpack-dev-server",

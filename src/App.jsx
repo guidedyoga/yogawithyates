@@ -25,8 +25,27 @@ const Title = styled.div`
 
 const Paragraph = styled.div`
   font-family: 'Roboto', sans-serif;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 300;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 4px 16px;
+  box-sizing: border-box;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  a {
+    color: rgba(0,0,0,0.87);
+  }
+
+  p {
+    color: rgba(0,0,0,0.72);
+    line-height: 14px;
+  }
+
   @media (max-width: 768px) {
     font-size: 20px;
   }
@@ -36,7 +55,20 @@ function App() {
   return (
     <Container>
       <Title>Yoga With Yates</Title>
-      <Paragraph>namaste tuned for more...</Paragraph>
+      <h2>Upcoming Classes</h2>
+      <Paragraph>
+        <h3>Saturdays @ 12pm</h3>
+        <a
+          href="https://www.deeplyrootedcafe.com/"
+          title="Deeply Rooted Welness Cafe Website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Deeply Rooted Wellness Cafe
+        </a>
+        <p>14505 E Alameda Ave</p>
+        <p>Aurora, CO 80012</p>
+      </Paragraph>
       <Links />
     </Container>
   );
